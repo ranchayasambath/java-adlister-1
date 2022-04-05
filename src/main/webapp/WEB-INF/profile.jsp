@@ -9,7 +9,7 @@
     <jsp:include page="../partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Greetings <b style="text-transform: uppercase">${user}</b>!</h1>
+        <h1>Greetings <strong>${user}</strong>!</h1>
     </div>
 
 </body>
