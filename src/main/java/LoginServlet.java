@@ -18,10 +18,10 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-//        boolean validAttempt = username.equals("admin") && password.equals("password");
-        boolean validAttempt = password.equals("password");
+//        boolean isAdmin = username.equals("admin") && password.equals("password");
+        boolean isAdmin = password.equals("password");
 
-        if (validAttempt) {
+        if (isAdmin) {
             request.getSession().setAttribute("user", username.substring(0,1).toUpperCase(Locale.ROOT)+username.substring(1));
             response.sendRedirect("/profile");
         } else {
